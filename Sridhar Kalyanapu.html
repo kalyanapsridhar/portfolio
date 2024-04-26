@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sridhar Kalyanapu - Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #6a0175;
+            color: rgb(222, 14, 14);
+        }
+        header {
+            background-color: #333333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            top: 0;
+            z-index: 999;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: brown;
+        }
+
+        section {
+            padding: 20px;
+            margin-bottom: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+            text-transform: uppercase;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer nav ul {
+            margin-top: 10px;
+        }
+
+        footer nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        footer nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer nav ul li a:hover {
+            color: #ff0000;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .skill {
+            width: calc(50% - 10px);
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* New styles for the Resources section */
+        #resources {
+            background-color: #f9f9f9;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .resource {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resource h3 {
+            margin-top: 0;
+        }
+
+        .resource p {
+            color: #333;
+        }
+
+        .resource a {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .resource a:hover {
+            background-color: #555;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #333;
+            border-bottom: 2px solid #3c1616;
+            padding-bottom: 5px;
+        }
+        
+        .section p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Sridhar Kalyanapu</h1>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#knowledge-sharing">Knowledge Sharing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hello, I'm Sridhar Kalyanapu, a passionate software engineer with a focus on web development and design. I hold a degree in Computer Science from XYZ University and have been honing my skills in the field for the past five years. My journey in technology started with a curiosity-driven exploration of programming languages, and since then, I've been fascinated by the endless possibilities that coding offers.</p>
+    <p>My expertise lies in front-end development, where I specialize in crafting engaging and user-friendly interfaces. I believe in the power of clean code and intuitive design to create seamless digital experiences. Whether it's building responsive websites or developing interactive web applications, I strive to deliver solutions that not only meet but exceed expectations.</p>
+    <p>Outside of coding, I enjoy exploring new technologies, experimenting with design concepts, and sharing my knowledge through writing and mentoring. I'm driven by a constant desire to learn and grow, both personally and professionally, and I'm excited to embark on new challenges and opportunities in the ever-evolving tech industry.</p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">
+            <h3>HTML5</h3>
+            <p>Proficient in creating structured and semantic markup using HTML5.</p>
+        </div>
+        <div class="skill">
+            <h3>CSS3</h3>
+            <p>Skilled in styling web pages and applications using CSS3, including advanced techniques like Flexbox and Grid Layout.</p>
+        </div>
+        <div class="skill">
+            <h3>JavaScript</h3>
+            <p>Experience in building interactive and dynamic user interfaces with JavaScript.</p>
+        </div>
+        <div class="skill">
+            <h3>React.js</h3>
+            <p>Familiar with React.js library for building modern and efficient web applications.</p>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="project">
+        <h3>Project: Web Development Showcase</h3>
+        <p>Explore a collection of my web development projects, ranging from responsive websites to dynamic web applications. Each project demonstrates my skills in HTML, CSS, JavaScript, and various frameworks.</p>
+        <a href="#">View Project</a>
+    </div>
+    <div class="project">
+        <h3>Project: UX/UI Design Portfolio</h3>
+        <p>Discover my portfolio of UX/UI design projects, showcasing my expertise in creating visually appealing and user-centric interfaces. From wireframes to prototypes, each project reflects my dedication to enhancing user experiences.</p>
+        <a href="#">View Project</a>
+    </div>
+</section>
+
+<section id="timeline">
+    <div class="blog-post">
+        <h2>Project Timeline</h2>
+        <ul>
+            <li>
+                <span class="date">April 8-10:</span> Research and gather content
+            </li>
+            <li>
+                <span class="date">April 11-18:</span> Design website layout
+            </li>
+            <li>
+                <span class="date">April 19-23:</span> Code website
+            </li>
+            <li>
+                <span class="date">April 23-26</span> Test website functionality
+            </li>
+            <li>
+                <span class="date">April 27-28</span> polish website
+            </li>
+        </ul>
+    </div>
+    </section>
+    <section id="knowledge-sharing">
+    <div class="blog-post">
+        <h2>Knowledge Sharing</h2>
+        <section class="section">
+            <div class="resources">
+                <a href="#">How to Build an Effective Portfolio</a><br>
+                <a href="#">10 Tips for Web Design Beginners</a><br>
+                <a href="#">Introduction to HTML & CSS</a><br>
+                <a href="#">Time Management Techniques</a>
+            </div>
+        </section>
+    </div>
+</section>
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-form">
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required="">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required="">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required=""></textarea>
+
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+</section>
+<footer>
+    <p>© 2024 Sridhar Kalyanapu. All rights reserved.</p>
+    <nav>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Accessibility</a></li>
+        </ul>
+    </nav>
+</footer>
+</body></html>
